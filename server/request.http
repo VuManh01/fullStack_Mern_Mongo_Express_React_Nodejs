@@ -1,9 +1,10 @@
+
 POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "manh",
-    "password": "manh"
+    "username": "henry",
+    "password": "henry"
 }
 
 ###
@@ -11,6 +12,34 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "manh",
-    "password": "manh1"
+    "username": "jim",
+    "password": "jim"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNjOTRlZDQ0ZGY3OTM1YWYwOGJiMDIiLCJpYXQiOjE3MjQ2ODM1MDF9.5aJdO5XBrtn23UA-C1p3fRqjLiS0HJSMxDHa90s5hBc
+
+{
+    "title": "React",
+    "description": "React",
+    "url": "react.com",
+    "status": "LEARNING"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNjOThmYTNlY2YwMjM1NDQwOTJlM2YiLCJpYXQiOjE3MjQ2ODQ1Mzh9.uyDqppA89uepUgrhmnIl9SZMt_MCAM-bmIHLGIZtRoM
+
+###
+PUT http://localhost:5000/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNjOThmYTNlY2YwMjM1NDQwOTJlM2YiLCJpYXQiOjE3MjQ2ODQ1Mzh9.uyDqppA89uepUgrhmnIl9SZMt_MCAM-bmIHLGIZtRoM
+
+{
+    "title": "Vue",
+    "description": "VUEEEE",
+    "url": "vuejs.org",
+    "status": "LEARNING"
 }
